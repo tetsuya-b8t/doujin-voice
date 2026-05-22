@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { works, getWorkById } from '@/data/works';
+
+export const dynamicParams = false;
 import StarRating from '@/components/StarRating';
 import CategoryBadge from '@/components/CategoryBadge';
 

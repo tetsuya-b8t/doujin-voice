@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://doujin-voice.com'),
   title: {
     default: "同人ボイスレビュー｜doujin-voice.com",
     template: "%s | 同人ボイスレビュー",

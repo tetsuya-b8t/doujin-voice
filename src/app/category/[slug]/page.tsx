@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { Category, CATEGORY_LABELS, getWorksByCategory } from '@/data/works';
 import WorkCard from '@/components/WorkCard';
 
+export const dynamicParams = false;
+
 const VALID_CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu'];
 
 type Props = {

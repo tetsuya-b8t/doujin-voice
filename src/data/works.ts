@@ -168,5 +168,7 @@ export function getTopWorks(n: number): Work[] {
 }
 
 export function getPickupWork(): Work {
-  return getTopWorks(1)[0];
+  const top = getTopWorks(1)[0];
+  if (!top) throw new Error('works配列が空です');
+  return top;
 }
