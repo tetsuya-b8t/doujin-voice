@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { works, getPickupWork, getTopWorks } from '@/data/works';
+import { fetchAllWorks, fetchTopWorks } from '@/lib/works';
 import WorkHero from '@/components/WorkHero';
 import WorkGrid from '@/components/WorkGrid';
 import RankingSidebar from '@/components/RankingSidebar';
@@ -13,11 +14,17 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
-  const pickup = getPickupWork();
-  const popular = getTopWorks(8);
-  const newWorks = [...works].slice(-8).reverse();
-  const featured = works.filter((w) => w.rating >= 4.5).slice(0, 8);
+export const revalidate = 3600;
+
+export default async function HomePage() {
+  const dbWorks = await fetchAllWorks();
+  const allWorks = dbWorks.length > 0 ? dbWorks : works;
+  const topWorks = dbWorks.length > 0 ? await fetchTopWorks(8) : getTopWorks(8);
+
+  const pickup = topWorks[0] ?? getPickupWork();
+  const popular = topWorks.slice(0, 8);
+  const newWorks = allWorks.slice(0, 8);
+  const featured = allWorks.filter((w) => w.rating >= 4.5).slice(0, 8);
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
