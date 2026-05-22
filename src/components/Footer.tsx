@@ -10,6 +10,8 @@ export default function Footer() {
           </p>
           <nav className="flex gap-6 text-sm text-gray-500">
             <Link href="/about" className="hover:text-accent transition-colors">サイト概要</Link>
+            <Link href="/privacy" className="hover:text-accent transition-colors">プライバシーポリシー</Link>
+            <Link href="/terms" className="hover:text-accent transition-colors">利用規約</Link>
             <Link href="/contact" className="hover:text-accent transition-colors">お問い合わせ</Link>
           </nav>
         </div>
