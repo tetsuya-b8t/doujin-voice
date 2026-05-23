@@ -9,6 +9,7 @@ export type Article = {
   tags: string[];
   sections: { heading?: string; body: string }[];
   relatedWorkIds: string[];
+  coverImage?: string;
 };
 
 export const ARTICLE_CATEGORY_LABELS: Record<ArticleCategory, string> = {
@@ -51,6 +52,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['1', '6', '10', '11', '16', '17'],
+    coverImage: 'https://images.unsplash.com/photo-XYi6_1YFMYo?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'ntr-ranking',
@@ -89,6 +91,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['2', '7', '12', '18', '23'],
+    coverImage: 'https://images.unsplash.com/photo-fVmneYIIcc0?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'what-is-ts',
@@ -123,6 +126,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['3', '8', '13', '19'],
+    coverImage: 'https://images.unsplash.com/photo-_prB260Sldo?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'yuri-best',
@@ -161,6 +165,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['4', '9', '14', '20', '24'],
+    coverImage: 'https://images.unsplash.com/photo-BQTeDdp2ZVY?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'beginner-guide',
@@ -203,6 +208,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['1', '4', '3', '2', '26'],
+    coverImage: 'https://images.unsplash.com/photo-nQ5_vWts4eI?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'top10-2025',
@@ -249,6 +255,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['20', '1', '19', '10', '4', '16', '25', '8', '2'],
+    coverImage: 'https://images.unsplash.com/photo-ZUhcJgPNBx8?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'what-is-ninpu',
@@ -283,6 +290,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['5', '15', '21'],
+    coverImage: 'https://images.unsplash.com/photo-X2lY3CQaTZY?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'binaural-guide',
@@ -317,6 +325,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['1', '11', '25', '22', '17'],
+    coverImage: 'https://images.unsplash.com/photo-PMN6wntEQtQ?w=800&q=80&auto=format&fit=crop',
   },
   {
     slug: 'what-is-hypno',
@@ -359,6 +368,7 @@ export const articles: Article[] = [
       },
     ],
     relatedWorkIds: ['26', '27', '28'],
+    coverImage: 'https://images.unsplash.com/photo-9oTz6knky6Q?w=800&q=80&auto=format&fit=crop',
   },
 ];
 

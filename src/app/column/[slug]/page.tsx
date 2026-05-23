@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { articles, getArticleBySlug, ARTICLE_CATEGORY_LABELS } from '@/data/articles';
 import { getWorkById } from '@/data/works';
 import WorkCard from '@/components/WorkCard';
@@ -54,6 +55,20 @@ export default async function ColumnDetailPage({ params }: Props) {
           <time className="text-xs text-gray-500">{article.publishedAt}</time>
         </div>
         <h1 className="text-3xl font-black text-white leading-snug mb-4">{article.title}</h1>
+
+        {article.coverImage && (
+          <div className="relative w-full aspect-[21/9] rounded-lg overflow-hidden mb-6">
+            <Image
+              src={article.coverImage}
+              alt={article.title}
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 768px"
+            />
+          </div>
+        )}
+
         <p className="text-sm text-gray-400 leading-relaxed">{article.description}</p>
         <div className="flex flex-wrap gap-1 mt-3">
           {article.tags.map((tag) => (
