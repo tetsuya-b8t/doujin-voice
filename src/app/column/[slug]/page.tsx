@@ -56,10 +56,10 @@ export default async function ColumnDetailPage({ params }: Props) {
         </div>
         <h1 className="text-3xl font-black text-white leading-snug mb-4">{article.title}</h1>
 
-        {article.coverImage && (
+        {relatedWorks[0]?.thumbnailUrl && (
           <div className="relative w-full aspect-[21/9] rounded-lg overflow-hidden mb-6">
             <Image
-              src={article.coverImage}
+              src={relatedWorks[0].thumbnailUrl}
               alt={article.title}
               fill
               className="object-cover"

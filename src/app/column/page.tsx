@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { articles } from '@/data/articles';
+import { getWorkById } from '@/data/works';
 import ArticleCard from '@/components/ArticleCard';
 
 export const metadata: Metadata = {
@@ -24,9 +25,18 @@ export default function ColumnPage() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {sorted.map((article) => (
-          <ArticleCard key={article.slug} article={article} />
-        ))}
+        {sorted.map((article) => {
+          const firstWork = article.relatedWorkIds[0]
+            ? getWorkById(article.relatedWorkIds[0])
+            : undefined;
+          return (
+            <ArticleCard
+              key={article.slug}
+              article={article}
+              coverImageUrl={firstWork?.thumbnailUrl}
+            />
+          );
+        })}
       </div>
     </div>
   );

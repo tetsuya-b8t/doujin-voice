@@ -4,6 +4,7 @@ import { Article, ARTICLE_CATEGORY_LABELS } from '@/data/articles';
 
 type Props = {
   article: Article;
+  coverImageUrl?: string;
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -12,14 +13,14 @@ const CATEGORY_COLORS: Record<string, string> = {
   review: 'bg-green-500/15 text-green-300 border border-green-500/30',
 };
 
-export default function ArticleCard({ article }: Props) {
+export default function ArticleCard({ article, coverImageUrl }: Props) {
   return (
     <Link href={`/column/${article.slug}`} className="block group">
       <div className="bg-card rounded-lg border border-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5 h-full flex flex-col overflow-hidden">
-        {article.coverImage ? (
+        {coverImageUrl ? (
           <div className="relative w-full aspect-[16/9] overflow-hidden">
             <Image
-              src={article.coverImage}
+              src={coverImageUrl}
               alt={article.title}
               fill
               className="object-cover transition-transform duration-300 group-hover:scale-105"
