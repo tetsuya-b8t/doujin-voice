@@ -64,15 +64,15 @@ export default async function ColumnDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="border-t border-gray-800 pt-6 space-y-6">
+      <div className="border-t border-white/10 pt-8 space-y-8">
         {article.sections.map((section, i) => (
           <section key={i}>
             {section.heading && (
-              <h2 className="text-base font-black text-white mb-2 pb-1 border-b border-gray-800">
+              <h2 className="text-lg font-bold text-white mb-4 pl-3 border-l-4 border-accent">
                 {section.heading}
               </h2>
             )}
-            <p className="text-sm text-gray-300 leading-relaxed">{section.body}</p>
+            <p className="text-base text-gray-200 leading-loose">{section.body}</p>
           </section>
         ))}
       </div>

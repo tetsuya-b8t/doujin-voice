@@ -18,7 +18,7 @@ const RANK_COLORS: Record<number, string> = {
 export default function WorkCard({ work, rank }: Props) {
   return (
     <Link href={`/works/${work.id}`} className="block group">
-      <div className="bg-card rounded-lg overflow-hidden border border-gray-800 hover:border-accent transition-colors duration-200">
+      <div className="bg-card rounded-lg overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5">
         <div className="relative">
           <Image
             src={work.thumbnailUrl}
@@ -46,11 +46,11 @@ export default function WorkCard({ work, rank }: Props) {
             <CategoryBadge category={work.category} />
             <StarRating rating={work.rating} size="sm" />
           </div>
-          <p className="text-sm font-medium text-gray-100 line-clamp-2 group-hover:text-accent transition-colors">
+          <p className="text-sm font-medium text-gray-100 line-clamp-2 group-hover:text-white transition-colors">
             {work.title}
           </p>
           <p className="text-xs text-gray-500 mt-1">{work.circle}</p>
-          <p className="text-sm font-bold text-accent mt-2">¥{work.price.toLocaleString()}</p>
+          <p className="text-sm font-bold text-white mt-2">¥{work.price.toLocaleString()}</p>
         </div>
       </div>
     </Link>

@@ -10,9 +10,9 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-background border-b border-gray-800">
+    <header className="sticky top-0 z-50 bg-[#12111a]/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
-        <Link href="/" className="text-accent font-black text-lg tracking-tight">
+        <Link href="/" className="text-white font-black text-lg tracking-tight">
           🎧 同人ボイスレビュー
         </Link>
 
@@ -30,7 +30,7 @@ export default function Header() {
           <Link href="/column" className="hover:text-accent transition-colors font-bold">
             コラム
           </Link>
-          <Link href="/ranking" className="text-accent font-bold hover:text-accent-hover transition-colors">
+          <Link href="/ranking" className="text-gray-200 font-bold hover:text-white transition-colors">
             ランキング
           </Link>
         </nav>

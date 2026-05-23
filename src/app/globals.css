@@ -1,21 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f0f0f;
-  --color-card: #1a1a1a;
-  --color-accent: #e63946;
-  --color-accent-hover: #c1121f;
+  --color-background: #12111a;
+  --color-card: #1e1b2e;
+  --color-accent: #f472b6;
+  --color-accent-hover: #e879a0;
 }
 
 :root {
-  --background: #0f0f0f;
-  --card: #1a1a1a;
-  --accent: #e63946;
+  --background: #12111a;
+  --card: #1e1b2e;
+  --accent: #f472b6;
 }
 
 body {
-  background-color: #0f0f0f;
-  color: #e5e5e5;
+  background-color: #12111a;
+  color: #e2e0f0;
   font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
 }
 

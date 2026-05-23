@@ -15,7 +15,7 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-accent transition-colors">お問い合わせ</Link>
           </nav>
         </div>
-        <p className="text-xs text-gray-700 mt-4 text-center">
+        <p className="text-xs text-gray-500 mt-4 text-center">
           当サイトはFANZA同人のアフィリエイトプログラムを利用しています。
         </p>
       </div>
