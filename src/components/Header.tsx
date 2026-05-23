@@ -33,6 +33,9 @@ export default function Header() {
           <Link href="/recommend" className="hover:text-accent transition-colors font-bold">
             診断
           </Link>
+          <Link href="/sale" className="text-pink-400 font-bold hover:text-pink-300 transition-colors">
+            SALE
+          </Link>
           <Link href="/ranking" className="text-gray-200 font-bold hover:text-white transition-colors">
             ランキング
           </Link>
@@ -76,6 +79,13 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
           >
             診断
+          </Link>
+          <Link
+            href="/sale"
+            className="text-pink-400 font-bold text-sm"
+            onClick={() => setMenuOpen(false)}
+          >
+            SALE
           </Link>
           <Link
             href="/ranking"

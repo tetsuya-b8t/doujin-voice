@@ -1,24 +1,67 @@
+/* Hallmark · genre: atmospheric · design-system: design.md · designed-as-app */
 @import "tailwindcss";
 
 @theme {
-  --color-background: #12111a;
-  --color-card: #1e1b2e;
-  --color-accent: #f472b6;
-  --color-accent-hover: #e879a0;
-}
+  /* Paper (backgrounds) */
+  --color-background: oklch(11% 0.025 300);
+  --color-card:       oklch(15% 0.03 290);
+  --color-paper-3:    oklch(20% 0.025 290);
 
-:root {
-  --background: #12111a;
-  --card: #1e1b2e;
-  --accent: #f472b6;
+  /* Ink (text) */
+  --color-ink:        oklch(88% 0.01 270);
+  --color-ink-2:      oklch(55% 0.015 280);
+
+  /* Structure */
+  --color-rule:       oklch(22% 0.02 290);
+
+  /* Accent */
+  --color-accent:       oklch(67% 0.20 342);
+  --color-accent-hover: oklch(60% 0.21 342);
+  --color-focus:        oklch(72% 0.22 342);
+
+  /* Typography */
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "YuGothic", system-ui, sans-serif;
+
+  /* Spacing (4pt scale) */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs:  0.75rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  2rem;
+  --space-xl:  3rem;
+  --space-2xl: 4.5rem;
+
+  /* Motion */
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-short: 150ms;
+  --dur-mid:   220ms;
+
+  /* Radius */
+  --radius-card: 0.75rem;
+  --radius-pill: 9999px;
+  --radius-input: 0.5rem;
 }
 
 body {
-  background-color: #12111a;
-  color: #e2e0f0;
-  font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-ink);
+  font-family: var(--font-body);
 }
 
 * {
   box-sizing: border-box;
+}
+
+/* Display font — applies to all heading elements and numeric contexts */
+h1, h2, h3, h4, h5, h6,
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Focus ring discipline — instant, never animated */
+:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
