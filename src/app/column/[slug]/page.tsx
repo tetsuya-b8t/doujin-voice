@@ -53,7 +53,7 @@ export default async function ColumnDetailPage({ params }: Props) {
           </span>
           <time className="text-xs text-gray-500">{article.publishedAt}</time>
         </div>
-        <h1 className="text-xl font-black text-white leading-tight mb-3">{article.title}</h1>
+        <h1 className="text-3xl font-black text-white leading-snug mb-4">{article.title}</h1>
         <p className="text-sm text-gray-400 leading-relaxed">{article.description}</p>
         <div className="flex flex-wrap gap-1 mt-3">
           {article.tags.map((tag) => (
@@ -64,7 +64,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="border-t border-white/10 pt-8 space-y-8">
+      <div className="border-t border-white/20 pt-8 space-y-10">
         {article.sections.map((section, i) => (
           <section key={i}>
             {section.heading && (
@@ -79,7 +79,7 @@ export default async function ColumnDetailPage({ params }: Props) {
 
       {relatedWorks.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-base font-black mb-4 pb-2 border-b border-gray-800">関連作品</h2>
+          <h2 className="text-xl font-bold text-white mb-4 pb-2 border-b border-white/20">関連作品</h2>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {relatedWorks.map((work) => (
               <WorkCard key={work!.id} work={work!} />
@@ -88,7 +88,7 @@ export default async function ColumnDetailPage({ params }: Props) {
         </section>
       )}
 
-      <div className="mt-8 flex gap-4 text-sm text-gray-500">
+      <div className="mt-10 flex gap-4 text-sm text-gray-300">
         <Link href="/column" className="hover:text-accent transition-colors">
           ← コラム一覧
         </Link>

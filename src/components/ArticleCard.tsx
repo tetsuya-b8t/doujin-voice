@@ -6,9 +6,9 @@ type Props = {
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  guide: 'bg-blue-900 text-blue-300',
-  ranking: 'bg-yellow-900 text-yellow-300',
-  review: 'bg-green-900 text-green-300',
+  guide: 'bg-blue-500/15 text-blue-300 border border-blue-500/30',
+  ranking: 'bg-yellow-500/15 text-yellow-300 border border-yellow-500/30',
+  review: 'bg-green-500/15 text-green-300 border border-green-500/30',
 };
 
 export default function ArticleCard({ article }: Props) {
@@ -21,10 +21,10 @@ export default function ArticleCard({ article }: Props) {
           </span>
           <time className="text-xs text-gray-500">{article.publishedAt}</time>
         </div>
-        <h2 className="text-sm font-bold text-gray-100 line-clamp-2 group-hover:text-white transition-colors mb-2 leading-snug">
+        <h2 className="text-base font-bold text-gray-100 line-clamp-2 group-hover:text-white transition-colors mb-3 leading-snug">
           {article.title}
         </h2>
-        <p className="text-xs text-gray-400 line-clamp-3 leading-relaxed flex-1">
+        <p className="text-sm text-gray-300 line-clamp-3 leading-relaxed flex-1">
           {article.description}
         </p>
         <div className="flex flex-wrap gap-1 mt-3">

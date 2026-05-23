@@ -1,4 +1,4 @@
-export type Category = 'asmr' | 'ntr' | 'ts' | 'yuri' | 'ninpu';
+export type Category = 'asmr' | 'ntr' | 'ts' | 'yuri' | 'ninpu' | 'hypno';
 
 export type Work = {
   id: string;
@@ -20,6 +20,7 @@ export const CATEGORY_LABELS: Record<Category, string> = {
   ts: 'TS',
   yuri: '百合',
   ninpu: '妊婦',
+  hypno: '催眠',
 };
 
 export const works: Work[] = [
@@ -347,6 +348,45 @@ export const works: Work[] = [
     description: '穏やかな女医さんが丁寧に問診してくれるロールプレイ系ASMR。優しい語りかけと心音・呼吸音の収録が絶妙。精神的に疲れた時に聴きたい包容力系の名作。',
     affiliateUrl: '#',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
+  },
+  {
+    id: '26',
+    title: '【催眠】眠れない夜のための深層誘導〜意識の底まで連れていく〜',
+    circle: 'ディープサウンドラボ',
+    cv: '霧島るな',
+    category: 'hypno',
+    price: 1320,
+    rating: 4.9,
+    tags: ['催眠', '誘導型', 'バイノーラル', '安眠', '意識委ね'],
+    description: '段階的な催眠誘導で意識の深層へと連れていく90分の大作。一般的な睡眠音声とは次元が違う「意識が委ねられていく感覚」を体験できる。繰り返し聴くことで誘導効果が深まる設計。',
+    affiliateUrl: '#',
+    thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
+  },
+  {
+    id: '27',
+    title: '【催眠】あなたは逃げられない〜甘い支配と服従の夜〜',
+    circle: 'ブラックパールボイス',
+    cv: '夜刀神あや',
+    category: 'hypno',
+    price: 1540,
+    rating: 4.8,
+    tags: ['催眠', '支配型', '洗脳', 'M向け', '服従'],
+    description: '命令と断言で支配していく、支配型催眠の決定版。抵抗できるとわかっていても従いたくなる声と脚本の質が圧倒的。ヤンデレ×催眠の組み合わせが新境地を開いた問題作。',
+    affiliateUrl: '#',
+    thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
+  },
+  {
+    id: '28',
+    title: '【催眠ASMR】耳元から意識が溶けていく〜バイノーラル催眠入門〜',
+    circle: 'トランスウェーブ',
+    cv: '白鷺みずき',
+    category: 'hypno',
+    price: 990,
+    rating: 4.7,
+    tags: ['催眠', 'ASMR', 'バイノーラル', '入門', '耳元'],
+    description: 'ASMR技術と催眠誘導を融合させた入門向け作品。耳かきの音と囁きの中にそっと催眠誘導が入ってくる独特の設計。「催眠は怖い」という先入観がある方に特におすすめの一本。',
+    affiliateUrl: '#',
+    thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
   },
 ];
 

@@ -18,12 +18,12 @@ export default function ColumnPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
-      <h1 className="text-2xl font-black mb-2">コラム・ガイド</h1>
-      <p className="text-gray-400 text-sm mb-8">
+      <h1 className="text-4xl font-black mb-3 tracking-tight">コラム・ガイド</h1>
+      <p className="text-gray-300 text-base mb-10 max-w-xl leading-relaxed">
         同人音声の選び方・ジャンル解説・おすすめランキングを掲載しています。
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {sorted.map((article) => (
           <ArticleCard key={article.slug} article={article} />
         ))}

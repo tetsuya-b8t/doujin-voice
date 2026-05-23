@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { CATEGORY_LABELS, Category } from '@/data/works';
 
-const CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu'];
+const CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu', 'hypno'];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
