@@ -407,3 +407,11 @@ export function getPickupWork(): Work {
   if (!top) throw new Error('works配列が空です');
   return top;
 }
+
+export function getAllTags(): string[] {
+  return Array.from(new Set(works.flatMap((w) => w.tags))).sort();
+}
+
+export function getWorksByTag(tag: string): Work[] {
+  return works.filter((w) => w.tags.includes(tag));
+}

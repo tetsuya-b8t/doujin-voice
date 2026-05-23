@@ -2,11 +2,13 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
-import { works, getWorkById } from '@/data/works';
-
-export const dynamicParams = false;
+import { works, getWorkById, getWorksByCategory, Category } from '@/data/works';
+import { articles } from '@/data/articles';
 import StarRating from '@/components/StarRating';
 import CategoryBadge from '@/components/CategoryBadge';
+import WorkCard from '@/components/WorkCard';
+
+export const dynamicParams = false;
 
 type Props = {
   params: Promise<{ id: string }>;
@@ -31,10 +33,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+const CATEGORY_COLUMN: Record<Category, string> = {
+  asmr: 'what-is-asmr',
+  ntr: 'ntr-ranking',
+  ts: 'what-is-ts',
+  yuri: 'yuri-best',
+  ninpu: 'what-is-ninpu',
+  hypno: 'what-is-hypno',
+};
+
 export default async function WorkDetailPage({ params }: Props) {
   const { id } = await params;
   const work = getWorkById(id);
   if (!work) notFound();
+
+  const relatedWorks = getWorksByCategory(work.category)
+    .filter((w) => w.id !== work.id)
+    .slice(0, 4);
+
+  const columnSlug = CATEGORY_COLUMN[work.category];
+  const columnArticle = articles.find((a) => a.slug === columnSlug);
 
   return (
     <div className="max-w-3xl mx-auto px-4 py-8">
@@ -65,9 +83,13 @@ export default async function WorkDetailPage({ params }: Props) {
             </dl>
             <div className="flex flex-wrap gap-1 mb-4">
               {work.tags.map((tag) => (
-                <span key={tag} className="text-xs bg-gray-800 text-gray-400 px-2 py-0.5 rounded">
+                <Link
+                  key={tag}
+                  href={`/tag/${encodeURIComponent(tag)}`}
+                  className="text-xs bg-gray-800 text-gray-400 hover:text-accent hover:bg-gray-700 px-2 py-0.5 rounded transition-colors"
+                >
                   #{tag}
-                </span>
+                </Link>
               ))}
             </div>
             <Link
@@ -87,10 +109,33 @@ export default async function WorkDetailPage({ params }: Props) {
         <p className="text-gray-300 leading-relaxed whitespace-pre-wrap">{work.description}</p>
       </section>
 
-      <div className="mt-8">
-        <Link href="/" className="text-sm text-gray-500 hover:text-accent transition-colors">
-          ← トップに戻る
+      {columnArticle && (
+        <Link href={`/column/${columnArticle.slug}`} className="block mt-8">
+          <div className="bg-card border border-white/10 hover:border-white/30 rounded-lg p-4 transition-all flex items-center gap-4">
+            <div className="text-2xl">📖</div>
+            <div>
+              <p className="text-xs text-gray-500 mb-1">このジャンルをもっと知る</p>
+              <p className="text-sm font-bold text-gray-100 hover:text-white">{columnArticle.title}</p>
+            </div>
+            <span className="ml-auto text-gray-500 text-sm">→</span>
+          </div>
         </Link>
+      )}
+
+      {relatedWorks.length > 0 && (
+        <section className="mt-10">
+          <h2 className="text-lg font-black mb-4 pb-2 border-b border-gray-800">同じジャンルのおすすめ</h2>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {relatedWorks.map((w) => (
+              <WorkCard key={w.id} work={w} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      <div className="mt-8 flex gap-4 text-sm text-gray-500">
+        <Link href="/" className="hover:text-accent transition-colors">← トップに戻る</Link>
+        <Link href={`/category/${work.category}`} className="hover:text-accent transition-colors">カテゴリ一覧 →</Link>
       </div>
     </div>
   );
