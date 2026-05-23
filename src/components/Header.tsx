@@ -27,6 +27,9 @@ export default function Header() {
               {CATEGORY_LABELS[cat]}
             </Link>
           ))}
+          <Link href="/column" className="hover:text-accent transition-colors font-bold">
+            コラム
+          </Link>
           <Link href="/ranking" className="text-accent font-bold hover:text-accent-hover transition-colors">
             ランキング
           </Link>
@@ -57,6 +60,13 @@ export default function Header() {
               {CATEGORY_LABELS[cat]}
             </Link>
           ))}
+          <Link
+            href="/column"
+            className="text-gray-300 hover:text-accent font-bold text-sm"
+            onClick={() => setMenuOpen(false)}
+          >
+            コラム
+          </Link>
           <Link
             href="/ranking"
             className="text-accent font-bold text-sm"
