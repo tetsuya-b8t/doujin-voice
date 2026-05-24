@@ -9,7 +9,7 @@
 
   /* Ink (text) */
   --color-ink:        oklch(88% 0.01 270);
-  --color-ink-2:      oklch(55% 0.015 280);
+  --color-ink-2:      oklch(68% 0.015 280);
 
   /* Structure */
   --color-rule:       oklch(22% 0.02 290);

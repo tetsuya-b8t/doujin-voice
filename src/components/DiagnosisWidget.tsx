@@ -15,7 +15,7 @@ export default function DiagnosisWidget() {
   return (
     <div className="border border-white/10 rounded-xl overflow-hidden">
       {/* Header strip — solid accent-ruled, no gradient */}
-      <div className="border-l-2 border-accent px-6 py-4 bg-card">
+      <div className="border-l-2 border-accent px-4 py-3 bg-card">
         <div className="flex items-baseline gap-3">
           <span className="text-accent text-xs font-bold uppercase tracking-widest font-display">
             診断
@@ -34,7 +34,7 @@ export default function DiagnosisWidget() {
           <button
             key={i}
             onClick={() => router.push(`/recommend?q0=${i}`)}
-            className="w-full text-left flex items-center justify-between px-6 py-4 text-sm text-ink-2 hover:text-white hover:bg-white/5 focus-visible:bg-white/5 focus-visible:text-white transition-colors"
+            className="w-full text-left flex items-center justify-between px-4 py-3 text-sm text-ink-2 hover:text-white hover:bg-white/5 focus-visible:bg-white/5 focus-visible:text-white transition-colors"
             style={{ transitionProperty: 'color, background-color', transitionDuration: '150ms' }}
           >
             <span>{option.label}</span>

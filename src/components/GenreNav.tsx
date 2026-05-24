@@ -53,7 +53,7 @@ export default function GenreNav() {
                 ].join(' ')}
                 style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
               >
-                <div className="p-5 md:p-6 flex flex-col gap-3">
+                <div className="p-4 flex flex-col gap-2">
                   <div className="flex items-center gap-2">
                     <span className={`inline-block w-1.5 h-1.5 rounded-full ${CATEGORY_DOT[cat]}`} />
                     <span className="text-xs font-bold text-ink-2 uppercase tracking-widest font-display">
@@ -61,10 +61,10 @@ export default function GenreNav() {
                     </span>
                   </div>
                   <div>
-                    <p className="font-display font-black text-white text-2xl leading-tight">
+                    <p className="font-display font-black text-white text-xl leading-tight">
                       {CATEGORY_LABELS[cat]}
                     </p>
-                    <p className="text-ink-2 text-sm mt-1.5 leading-relaxed">
+                    <p className="text-ink-2 text-xs mt-1 leading-snug">
                       {CATEGORY_TAGLINE[cat]}
                     </p>
                   </div>
@@ -94,7 +94,7 @@ export default function GenreNav() {
               ].join(' ')}
               style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
             >
-              <div className="p-4 flex flex-col gap-2.5">
+              <div className="p-3 flex flex-col gap-2">
                 <div className="flex items-center gap-1.5">
                   <span className={`inline-block w-1.5 h-1.5 rounded-full flex-shrink-0 ${CATEGORY_DOT[cat]}`} />
                   <p className="font-display font-black text-white text-base leading-tight">
