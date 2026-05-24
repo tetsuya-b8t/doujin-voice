@@ -1,56 +1,72 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Work } from '@/data/works';
+import { Work, CATEGORY_LABELS, Category } from '@/data/works';
 import StarRating from './StarRating';
-import CategoryBadge from './CategoryBadge';
+
+/* Hallmark · component: WorkCard · genre: atmospheric · design-system: design.md
+ * Premium catalog: 3:4 jacket, accent left-bar per genre, hover title overlay. No price.
+ */
 
 type Props = {
   work: Work;
   rank?: number;
 };
 
-const RANK_COLORS: Record<number, string> = {
-  1: 'bg-yellow-500 text-black',
-  2: 'bg-gray-400 text-black',
-  3: 'bg-amber-700 text-white',
+const CATEGORY_ACCENT: Record<Category, string> = {
+  asmr:  'bg-sky-400',
+  ntr:   'bg-rose-400',
+  ts:    'bg-amber-400',
+  yuri:  'bg-pink-400',
+  ninpu: 'bg-emerald-400',
+  hypno: 'bg-violet-400',
 };
 
 export default function WorkCard({ work, rank }: Props) {
   return (
     <Link href={`/works/${work.id}`} className="block group">
-      <div className="bg-card rounded-lg overflow-hidden border border-white/10 hover:border-white/30 transition-all duration-200 hover:-translate-y-0.5">
-        <div className="relative">
+      <div
+        className="relative border border-rule rounded-lg bg-card overflow-hidden hover:border-white/20"
+        style={{ transitionProperty: 'border-color', transitionDuration: '150ms' }}
+      >
+        {/* Category accent bar */}
+        <div className={`absolute left-0 top-0 bottom-0 w-0.5 z-10 ${CATEGORY_ACCENT[work.category]}`} />
+
+        {/* 3:4 jacket */}
+        <div className="relative aspect-[3/4] overflow-hidden">
           <Image
             src={work.thumbnailUrl}
             alt={work.title}
-            width={300}
-            height={300}
-            className="w-full aspect-square object-cover"
+            fill
+            className="object-cover"
+            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             unoptimized
           />
-          {rank !== undefined && rank <= 3 && (
-            <span
-              className={`absolute top-2 left-2 w-7 h-7 rounded-full flex items-center justify-center text-xs font-black ${RANK_COLORS[rank]}`}
+          {/* Rank ghost number */}
+          {rank !== undefined && (
+            <span className="absolute top-2 left-3 font-display font-black text-5xl text-white/10 leading-none select-none z-10 pointer-events-none">
+              {rank}
+            </span>
+          )}
+          {/* Hover title overlay */}
+          <div
+            className="absolute inset-0 bg-background/0 group-hover:bg-background/80 flex items-end p-3"
+            style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
+          >
+            <p
+              className="text-white font-bold text-sm leading-snug line-clamp-2 opacity-0 group-hover:opacity-100"
+              style={{ transitionProperty: 'opacity', transitionDuration: '150ms' }}
             >
-              {rank}
-            </span>
-          )}
-          {rank !== undefined && rank > 3 && (
-            <span className="absolute top-2 left-2 bg-gray-800 text-gray-300 w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold">
-              {rank}
-            </span>
-          )}
-        </div>
-        <div className="p-3">
-          <div className="flex items-center gap-2 mb-1">
-            <CategoryBadge category={work.category} />
-            <StarRating rating={work.rating} size="sm" />
+              {work.title}
+            </p>
           </div>
-          <p className="text-sm font-medium text-gray-100 line-clamp-2 group-hover:text-white transition-colors">
-            {work.title}
-          </p>
-          <p className="text-xs text-gray-500 mt-1">{work.circle}</p>
-          <p className="text-sm font-bold text-white mt-2">¥{work.price.toLocaleString()}</p>
+        </div>
+
+        {/* Footer: rating + genre label */}
+        <div className="px-3 py-2 flex items-center justify-between">
+          <StarRating rating={work.rating} size="sm" />
+          <span className="font-display font-bold text-ink-2 text-xs uppercase tracking-wide">
+            {CATEGORY_LABELS[work.category]}
+          </span>
         </div>
       </div>
     </Link>
