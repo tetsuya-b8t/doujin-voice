@@ -1,27 +1,34 @@
-/* Hallmark · genre: atmospheric · design-system: design.md · designed-as-app */
+/* Hallmark · genre: cosme · design-system: design.md · ivory × deep rose */
 @import "tailwindcss";
 
 @theme {
-  /* Paper (backgrounds) */
-  --color-background: oklch(11% 0.025 300);
-  --color-card:       oklch(15% 0.03 290);
-  --color-paper-3:    oklch(20% 0.025 290);
+  /* Backgrounds */
+  --color-background: oklch(97% 0.008 55);
+  --color-card:       oklch(100% 0 0);
+  --color-paper-3:    oklch(94% 0.01 55);
 
-  /* Ink (text) */
-  --color-ink:        oklch(88% 0.01 270);
-  --color-ink-2:      oklch(68% 0.015 280);
+  /* Text */
+  --color-ink:        oklch(13% 0.003 285);
+  --color-ink-2:      oklch(52% 0.004 285);
 
   /* Structure */
-  --color-rule:       oklch(22% 0.02 290);
+  --color-rule:       oklch(91% 0.012 55);
 
-  /* Accent */
-  --color-accent:       oklch(67% 0.20 342);
-  --color-accent-hover: oklch(60% 0.21 342);
-  --color-focus:        oklch(72% 0.22 342);
+  /* Accent (deep rose) */
+  --color-accent:       oklch(40% 0.17 352);
+  --color-accent-hover: oklch(35% 0.17 352);
+  --color-focus:        oklch(52% 0.20 352);
+
+  /* Tag */
+  --color-tag-bg:     oklch(97% 0.018 354);
+  --color-tag-border: oklch(89% 0.04 354);
+
+  /* Star (amber) */
+  --color-star:       oklch(72% 0.15 68);
 
   /* Typography */
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "YuGothic", system-ui, sans-serif;
+  --font-body: var(--font-mplus-rounded), 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
 
   /* Spacing (4pt scale) */
   --space-3xs: 0.25rem;
@@ -39,9 +46,9 @@
   --dur-mid:   220ms;
 
   /* Radius */
-  --radius-card: 0.75rem;
-  --radius-pill: 9999px;
-  --radius-input: 0.5rem;
+  --radius-card:  0.625rem;
+  --radius-pill:  9999px;
+  --radius-input: 9999px;
 }
 
 body {
@@ -54,13 +61,11 @@ body {
   box-sizing: border-box;
 }
 
-/* Display font — applies to all heading elements and numeric contexts */
 h1, h2, h3, h4, h5, h6,
 .font-display {
   font-family: var(--font-display);
 }
 
-/* Focus ring discipline — instant, never animated */
 :focus-visible {
   outline: 2px solid var(--color-focus);
   outline-offset: 2px;

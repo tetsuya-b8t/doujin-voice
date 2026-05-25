@@ -1,63 +1,65 @@
 'use client';
 
-/* Hallmark · component: Header · genre: atmospheric · design-system: design.md
- * 2-tier: logo row + genre nav row. No emoji. Specific transition properties only.
+/* Hallmark · component: Header · genre: cosme · design-system: design.md
+ * White background. Rose logo (bold upright). Pill search. Underline tab nav.
  */
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { CATEGORY_LABELS, Category } from '@/data/works';
 
 const CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu', 'hypno'];
 
+const NAV_LINKS = [
+  { href: '/ranking', label: 'ランキング' },
+  { href: '/sale', label: 'セール' },
+  { href: '/column', label: 'コラム' },
+];
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+  const isCategoryActive = (cat: string) => pathname === `/category/${cat}`;
 
   return (
-    <header className="sticky top-0 z-50 bg-background/90 backdrop-blur-md border-b border-rule">
-      {/* Tier 1: Logo + utility links */}
-      <div className="max-w-6xl mx-auto px-4 h-12 flex items-center justify-between">
-        <Link href="/" className="flex flex-col">
-          <span className="font-display font-black text-sm tracking-[0.15em] uppercase text-white leading-tight">
-            DOUJIN VOICE
+    <header className="sticky top-0 z-50 bg-card border-b border-rule">
+      {/* Tier 1: Logo + search + nav */}
+      <div className="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
+        <Link href="/" className="flex-shrink-0">
+          <span className="font-black text-lg text-accent leading-none tracking-tight">
+            doujin<span style={{ color: '#d4848a' }}>·</span>voice
           </span>
-          <span className="text-[9px] text-ink-2 tracking-widest leading-tight">同人音声レビュー</span>
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
-          <Link
-            href="/column"
-            className="text-ink-2 hover:text-white font-display font-bold text-xs uppercase tracking-widest"
-            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
-          >
-            コラム
-          </Link>
-          <Link
-            href="/recommend"
-            className="text-ink-2 hover:text-white font-display font-bold text-xs uppercase tracking-widest"
-            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
-          >
-            診断
-          </Link>
-          <Link
-            href="/ranking"
-            className="text-ink-2 hover:text-white font-display font-bold text-xs uppercase tracking-widest"
-            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
-          >
-            RANKING
-          </Link>
-          <Link
-            href="/sale"
-            className="text-accent hover:text-accent-hover font-display font-bold text-xs uppercase tracking-widest"
-            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
-          >
-            SALE
-          </Link>
+        {/* Search pill (desktop) */}
+        <div className="hidden md:block flex-1 max-w-xs">
+          <input
+            type="text"
+            placeholder="作品名・声優名で探す"
+            className="w-full border border-rule rounded-full px-4 py-1.5 text-xs text-ink bg-background placeholder:text-ink-2 outline-none"
+            style={{ transitionProperty: 'border-color', transitionDuration: '150ms' }}
+          />
+        </div>
+
+        <nav className="hidden md:flex items-center gap-5 ml-auto">
+          {NAV_LINKS.map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className="text-xs text-ink-2 hover:text-ink"
+              style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 text-ink-2"
+          className="md:hidden ml-auto p-2 text-ink-2"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="メニュー"
         >
@@ -76,14 +78,29 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Tier 2: Genre nav (desktop) */}
-      <div className="hidden md:block border-t border-rule">
-        <nav className="max-w-6xl mx-auto px-4 grid grid-cols-6 h-9">
+      {/* Tier 2: Category tabs (desktop) */}
+      <div className="hidden md:block border-t border-rule overflow-x-auto">
+        <nav className="max-w-6xl mx-auto px-4 flex">
+          <Link
+            href="/"
+            className={`text-xs px-4 py-2.5 border-b-2 whitespace-nowrap font-medium ${
+              isActive('/')
+                ? 'text-accent border-accent font-bold'
+                : 'text-ink-2 border-transparent hover:text-ink'
+            }`}
+            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
+          >
+            すべて
+          </Link>
           {CATEGORIES.map((cat) => (
             <Link
               key={cat}
               href={`/category/${cat}`}
-              className="flex items-center justify-center text-ink-2 hover:text-white font-display font-bold text-xs uppercase tracking-wider border-r border-rule last:border-r-0"
+              className={`text-xs px-4 py-2.5 border-b-2 whitespace-nowrap font-medium ${
+                isCategoryActive(cat)
+                  ? 'text-accent border-accent font-bold'
+                  : 'text-ink-2 border-transparent hover:text-ink'
+              }`}
               style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
             >
               {CATEGORY_LABELS[cat]}
@@ -95,21 +112,23 @@ export default function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden bg-card border-t border-rule px-4 py-3 flex flex-col gap-3">
+          <Link href="/" className="text-sm font-bold text-ink-2" onClick={() => setMenuOpen(false)}>すべて</Link>
           {CATEGORIES.map((cat) => (
             <Link
               key={cat}
               href={`/category/${cat}`}
-              className="text-ink-2 font-display font-bold text-sm uppercase tracking-wide"
+              className="text-sm font-bold text-ink-2"
               onClick={() => setMenuOpen(false)}
             >
               {CATEGORY_LABELS[cat]}
             </Link>
           ))}
           <div className="border-t border-rule pt-3 flex flex-col gap-3">
-            <Link href="/column" className="text-ink-2 font-bold text-sm" onClick={() => setMenuOpen(false)}>コラム</Link>
-            <Link href="/recommend" className="text-ink-2 font-bold text-sm" onClick={() => setMenuOpen(false)}>診断</Link>
-            <Link href="/ranking" className="text-ink-2 font-bold text-sm" onClick={() => setMenuOpen(false)}>RANKING</Link>
-            <Link href="/sale" className="text-accent font-bold text-sm" onClick={() => setMenuOpen(false)}>SALE</Link>
+            {NAV_LINKS.map(({ href, label }) => (
+              <Link key={href} href={href} className="text-sm text-ink-2" onClick={() => setMenuOpen(false)}>
+                {label}
+              </Link>
+            ))}
           </div>
         </div>
       )}

@@ -83,9 +83,15 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY= # Supabaseプロジェクト設定から取得
 - [ ] FANZAアフィリエイト審査通過 → APIキー取得
 - [ ] FANZA API自動化パイプライン構築
 - [ ] アフィリエイトリンクをサイトに組み込む
-- [ ] Google Analytics / Search Console 設置
-- [ ] サイトマップ（next-sitemap）追加
 - [ ] 作品データのSupabaseへの移行（現在は静的データ）
+
+### 完了（追加分2）
+- [x] Google Analytics設置（G-T7LCYN3646）
+- [x] Search Console設定・確認完了
+- [x] サイトマップ（next-sitemap）追加 → https://doujin-voice.com/sitemap.xml
+- [x] robots.txt自動生成
+- [x] SEO強化（robots/twitter card/OGP locale/description改善）
+- [x] Supabaseクライアントをnull安全に修正（環境変数なしでもビルド通過）
 
 ### 完了（追加分）
 - [x] コラム/ブログ機能追加（/column、/column/[slug]）

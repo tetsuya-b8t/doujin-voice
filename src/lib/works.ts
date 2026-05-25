@@ -34,6 +34,7 @@ function toWork(row: DbWork): Work {
 }
 
 export async function fetchAllWorks(): Promise<Work[]> {
+  if (!supabase) return [];
   const { data, error } = await supabase
     .from('works')
     .select('*')
@@ -43,6 +44,7 @@ export async function fetchAllWorks(): Promise<Work[]> {
 }
 
 export async function fetchWorkById(fanzaId: string): Promise<Work | null> {
+  if (!supabase) return null;
   const { data, error } = await supabase
     .from('works')
     .select('*')
@@ -53,6 +55,7 @@ export async function fetchWorkById(fanzaId: string): Promise<Work | null> {
 }
 
 export async function fetchWorksByCategory(category: Category): Promise<Work[]> {
+  if (!supabase) return [];
   const { data, error } = await supabase
     .from('works')
     .select('*')
@@ -63,6 +66,7 @@ export async function fetchWorksByCategory(category: Category): Promise<Work[]> 
 }
 
 export async function fetchTopWorks(n: number): Promise<Work[]> {
+  if (!supabase) return [];
   const { data, error } = await supabase
     .from('works')
     .select('*')

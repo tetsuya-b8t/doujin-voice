@@ -15,7 +15,7 @@ export default function EditorialSection({ articles }: Props) {
       <div className="flex items-center justify-between mb-5">
         <div>
           <p className="text-xs text-accent uppercase tracking-widest mb-1">Column</p>
-          <h2 className="text-xl font-black text-white">編集部おすすめコラム</h2>
+          <h2 className="text-xl font-black text-ink">編集部おすすめコラム</h2>
         </div>
         <Link href="/column" className="text-sm text-accent hover:underline font-bold">
           全コラムを読む →

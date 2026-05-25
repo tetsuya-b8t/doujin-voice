@@ -6,7 +6,7 @@ type Props = {
 export default function StarRating({ rating, size = 'md' }: Props) {
   const textSize = size === 'sm' ? 'text-xs' : 'text-sm';
   return (
-    <span className={`text-yellow-400 font-bold ${textSize}`}>
+    <span className={`font-bold ${textSize}`} style={{ color: '#e8a030' }}>
       ★{rating.toFixed(1)}
     </span>
   );

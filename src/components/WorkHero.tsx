@@ -41,7 +41,7 @@ export default function WorkHero({ work }: Props) {
               </span>
               <StarRating rating={work.rating} />
             </div>
-            <h2 className="text-xl md:text-2xl font-black text-white leading-tight mb-2">
+            <h2 className="text-xl md:text-2xl font-black text-ink leading-tight mb-2">
               {work.title}
             </h2>
             <p className="text-sm text-ink-2 mb-3">CV: {work.cv}｜{work.circle}</p>
@@ -67,7 +67,7 @@ export default function WorkHero({ work }: Props) {
             </Link>
             <Link
               href={`/works/${work.id}`}
-              className="text-sm text-ink-2 hover:text-white"
+              className="text-sm text-ink-2 hover:text-accent"
               style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
             >
               詳細を見る

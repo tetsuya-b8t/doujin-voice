@@ -25,7 +25,7 @@ export default function ArticleCard({ article, coverImageUrl }: Props) {
   return (
     <Link href={href} className="block group">
       <div
-        className="bg-card rounded-lg border border-rule hover:border-white/20 h-full flex flex-col overflow-hidden"
+        className="bg-card rounded-lg border border-rule hover:border-accent/40 h-full flex flex-col overflow-hidden"
         style={{ transitionProperty: 'border-color', transitionDuration: '150ms' }}
       >
         {/* Cover image — 21:9 cinema ratio */}
@@ -54,7 +54,7 @@ export default function ArticleCard({ article, coverImageUrl }: Props) {
             </span>
           </div>
 
-          <h2 className="text-base font-bold text-ink line-clamp-2 group-hover:text-white mb-2 leading-snug"
+          <h2 className="text-base font-bold text-ink line-clamp-2 group-hover:text-accent mb-2 leading-snug"
               style={{ transitionProperty: 'color', transitionDuration: '150ms' }}>
             {article.title}
           </h2>
@@ -63,7 +63,7 @@ export default function ArticleCard({ article, coverImageUrl }: Props) {
             {article.description}
           </p>
 
-          <p className="text-xs font-display font-bold text-ink-2 mt-3 group-hover:text-white text-right"
+          <p className="text-xs font-display font-bold text-ink-2 mt-3 group-hover:text-accent text-right"
              style={{ transitionProperty: 'color', transitionDuration: '150ms' }}>
             続きを読む →
           </p>
