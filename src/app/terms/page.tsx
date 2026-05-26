@@ -10,6 +10,17 @@ export default function TermsPage() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold mb-8">利用規約</h1>
 
+      {/* Age warning banner */}
+      <div className="border border-accent/40 bg-accent/5 rounded-xl px-5 py-4 mb-8">
+        <p className="text-sm text-ink font-bold mb-1">
+          <span className="text-accent mr-2">R18</span>成人向けコンテンツに関する重要事項
+        </p>
+        <p className="text-xs text-ink-2 leading-relaxed">
+          このサイトは18歳以上の方のみを対象としています。18歳未満の方は直ちにこのサイトを離れてください。
+          当サイトにアクセスした時点で、あなたが18歳以上であることを確認したものとみなします。
+        </p>
+      </div>
+
       <div className="space-y-8 text-gray-300 leading-relaxed">
         <section>
           <h2 className="text-xl font-semibold text-white mb-3">1. サービスについて</h2>
@@ -20,11 +31,12 @@ export default function TermsPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-white mb-3">2. 年齢制限</h2>
+          <h2 className="text-xl font-semibold text-white mb-3">2. 年齢制限（重要）</h2>
           <p>
-            当サイトは成人向けコンテンツへのリンクを含む場合があります。
-            18歳未満の方のご利用はお断りしております。
+            当サイトは成人向け（R18）コンテンツへのリンクを含みます。
+            <strong className="text-white">18歳未満の方のご利用は固くお断りしております。</strong>
             当サイトにアクセスした時点で、18歳以上であることに同意したものとみなします。
+            18歳未満の方は直ちに当サイトを離脱してください。
           </p>
         </section>
 
@@ -65,7 +77,7 @@ export default function TermsPage() {
         </section>
 
         <p className="text-sm text-gray-500 pt-4 border-t border-gray-800">
-          制定日：2024年1月1日
+          制定日：2025年5月1日
         </p>
       </div>
     </div>

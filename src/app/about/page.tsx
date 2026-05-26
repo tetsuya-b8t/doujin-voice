@@ -103,7 +103,7 @@ export default function AboutPage() {
             </div>
             <div className="flex gap-4">
               <dt className="text-gray-500 min-w-[6rem]">開設</dt>
-              <dd className="text-gray-300">2024年1月</dd>
+              <dd className="text-gray-300">2025年5月</dd>
             </div>
             <div className="flex gap-4">
               <dt className="text-gray-500 min-w-[6rem]">お問い合わせ</dt>

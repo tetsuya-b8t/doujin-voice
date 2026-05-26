@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import AgeGate from "@/components/AgeGate";
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 
@@ -28,10 +29,13 @@ export const metadata: Metadata = {
     default: "同人ボイスレビュー｜doujin-voice.com",
     template: "%s | 同人ボイスレビュー",
   },
-  description: "FANZA同人音声作品のレビュー・ランキングサイト。ASMR・NTR・TS・百合など豊富なジャンルをレビュー。",
+  description: "FANZA同人音声作品のレビュー・ランキングサイト（R18・成人向け）。ASMR・NTR・TS・百合など豊富なジャンルをレビュー。",
   robots: {
     index: true,
     follow: true,
+  },
+  other: {
+    rating: 'adult',
   },
   openGraph: {
     siteName: "同人ボイスレビュー｜doujin-voice.com",
@@ -51,6 +55,7 @@ export default function RootLayout({
   return (
     <html lang="ja" className={`${spaceGrotesk.variable} ${mPlusRounded.variable}`}>
       <body className="min-h-screen flex flex-col">
+        <AgeGate />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

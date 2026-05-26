@@ -34,7 +34,7 @@ export const works: Work[] = [
     rating: 4.9,
     tags: ['耳かき', '添い寝', '甘々', 'バイノーラル'],
     description: '大好きな彼女があなたの膝枕で耳かきをしてくれる作品。バイノーラル録音で臨場感抜群。甘い言葉と丁寧な耳かきで眠れない夜もぐっすり。全90分の大ボリューム。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_742725/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -47,7 +47,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['NTR', '寝取られ', '修羅場', '独占欲'],
     description: '長年付き合った彼女が上司に奪われていく様子を描く官能音声ドラマ。リアルな心理描写と濃密なシーンが話題作。寝取られ系の中でも完成度の高い一作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_750399/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=NTR',
   },
   {
@@ -60,7 +60,7 @@ export const works: Work[] = [
     rating: 4.6,
     tags: ['TS', '女体化', '戸惑い', '自己探求'],
     description: '突然女の子の体になった主人公が自分の新しい体に戸惑いながらも探求していく音声作品。TS入門にも最適な優しいトーンで描かれた一作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_740538/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=TS',
   },
   {
@@ -73,7 +73,7 @@ export const works: Work[] = [
     rating: 4.8,
     tags: ['百合', '学園', '初恋', '純愛'],
     description: '放課後の教室で二人だけになってしまった同級生との甘くて切ない時間。純粋な百合愛を描いた王道作品。淡い初恋の雰囲気が絶妙に表現されている。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_396367/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=百合',
   },
   {
@@ -86,7 +86,7 @@ export const works: Work[] = [
     rating: 4.5,
     tags: ['妊婦', '夫婦', '愛情深い', 'ほのぼの'],
     description: '臨月を迎えた妻との穏やかで愛に溢れた夜を描く音声作品。出産前の特別な時間を丁寧に描写。夫婦愛の温かさが伝わる癒し系の一作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_672060/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=妊婦',
   },
   {
@@ -99,7 +99,7 @@ export const works: Work[] = [
     rating: 4.4,
     tags: ['ASMR', '図書館', '朗読', 'お姉さん系'],
     description: '閉館後の図書館で司書さんが耳元で本を読み聞かせてくれる作品。静かな環境音と落ち着いた声質がたまらない。睡眠前にも最適な癒し音声。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_656480/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -112,7 +112,7 @@ export const works: Work[] = [
     rating: 4.6,
     tags: ['NTR', '友人の彼女', '禁断', '背徳感'],
     description: '親友の彼女から突然告白された主人公。断れなかったことから始まる禁断の関係を描く。背徳感と甘さが絶妙にブレンドされた高品質な音声ドラマ。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_741747/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=NTR',
   },
   {
@@ -125,7 +125,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['TS', '女子校', '百合', '学園生活'],
     description: 'TS後に女子校に転校した主人公が繰り広げる甘酸っぱい学園生活。TSと百合の合わせ技が絶妙で、キャラクターの成長も丁寧に描かれている人気シリーズ。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_692442/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=TS',
   },
   {
@@ -138,7 +138,7 @@ export const works: Work[] = [
     rating: 4.3,
     tags: ['百合', 'センパイ後輩', '部活', '告白'],
     description: '部活帰りに後輩から思わぬ告白を受けた先輩の視点で描かれる百合音声。初々しい恋心と戸惑いが丁寧に表現された純愛作品。入門編にも最適。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_600797/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=百合',
   },
   {
@@ -151,7 +151,7 @@ export const works: Work[] = [
     rating: 4.8,
     tags: ['ASMR', 'ヤンデレ', '独占欲', 'どS'],
     description: '徐々に執着を強めていくヤンデレ彼女の音声作品。甘さの中に狂気を感じさせる独特の世界観が中毒性抜群。ヤンデレ好きなら絶対に押さえておきたい一作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_711853/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -164,7 +164,7 @@ export const works: Work[] = [
     rating: 4.6,
     tags: ['ASMR', 'お姉さん', '膝枕', 'マッサージ'],
     description: '仕事帰りに出迎えてくれるお姉さんキャラが頭皮マッサージと耳かきで癒してくれる作品。疲れた夜に聴きたい至高の癒し系ASMR。バイノーラル収録。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_742725/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -177,7 +177,7 @@ export const works: Work[] = [
     rating: 4.5,
     tags: ['NTR', '不倫', '電話', 'リアル系'],
     description: '妻の不倫を知ってしまった夫の視点から描くリアル系NTR音声。電話という演出が臨場感を高める。重厚なストーリーと緻密な心理描写が評価を集めている。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_750399/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=NTR',
   },
   {
@@ -190,7 +190,7 @@ export const works: Work[] = [
     rating: 4.4,
     tags: ['TS', '魔法少女', 'ファンタジー', 'コメディ'],
     description: '魔法少女に変身したはずが元に戻る方法を失った主人公のドタバタ日常を描くコメディ系TS作品。笑いあり感動あり、軽いノリで楽しめる一作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_740538/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=TS',
   },
   {
@@ -203,7 +203,7 @@ export const works: Work[] = [
     rating: 4.6,
     tags: ['百合', '保健室', '看病', 'ほっこり'],
     description: '体調を崩した主人公を保健室で看病してくれた同級生との距離が縮まる甘い音声作品。雨の日の情景描写と優しい声質が心に染みる癒し系百合。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_396367/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=百合',
   },
   {
@@ -216,7 +216,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['妊婦', '同棲', '日常', '純愛'],
     description: '彼女の妊娠が発覚してからの同棲生活を丁寧に描いた音声シリーズ。つわりの介抱から胎動の感動まで、二人の絆の深まりをリアルに表現した感動作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_672060/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=妊婦',
   },
   {
@@ -229,7 +229,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['ASMR', 'カフェ', '深夜', '職場恋愛'],
     description: '閉店後のカフェで二人きりになった店員さんとの特別な時間。コーヒーを淹れる音や食器の音など環境音もこだわり抜いた没入感のある作品。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_656480/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -242,7 +242,7 @@ export const works: Work[] = [
     rating: 4.5,
     tags: ['ASMR', '幼なじみ', '寝かしつけ', '甘々'],
     description: '幼なじみの女の子が子守唄と耳かきで眠りに誘ってくれる作品。長年の信頼関係から生まれる安心感と甘さが魅力。不眠気味の方にも特におすすめ。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_741747/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -255,7 +255,7 @@ export const works: Work[] = [
     rating: 4.4,
     tags: ['NTR', '元カノ', '再会', '昔の恋'],
     description: '久しぶりの同窓会で再会した元カノとの甘い再燃。今は別の人と付き合っているはずなのに…背徳感満載のリアルな大人の音声ドラマ。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_692442/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=NTR',
   },
   {
@@ -268,7 +268,7 @@ export const works: Work[] = [
     rating: 4.8,
     tags: ['TS', '職場', 'ラブコメ', 'サプライズ'],
     description: 'TS後に別会社へ転職したはずが、元の姿を知っている同僚と出会ってしまう。ラブコメ要素たっぷりのTS作品。シリーズ3作目だが単独でも楽しめる完成度。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_600797/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=TS',
   },
   {
@@ -281,7 +281,7 @@ export const works: Work[] = [
     rating: 4.9,
     tags: ['百合', '温泉', '和風', '一夜限り'],
     description: '一人旅で訪れた温泉旅館で出会った仲居さんとの忘れられない夜。和の情緒漂う独特の雰囲気と二人の間に生まれる特別な感情を丁寧に描いた傑作百合。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_711853/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=百合',
   },
   {
@@ -294,7 +294,7 @@ export const works: Work[] = [
     rating: 4.6,
     tags: ['妊婦', '産後', '育児', '家族愛'],
     description: '人気シリーズの続編。産後の妻との穏やかな毎日と生まれたばかりの赤ちゃんとの三人の時間。ほっこりとした家族の幸せを音声で体験できる癒し作品。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_742725/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=妊婦',
   },
   {
@@ -307,7 +307,7 @@ export const works: Work[] = [
     rating: 4.3,
     tags: ['ASMR', '雨音', '無口', '添い寝'],
     description: '言葉少なめの彼女が雨音の中でそっと寄り添ってくれる作品。過剰な演技がなく自然体の声質が心地よい。雨の日に眠れない夜のお供に。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_750399/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -320,7 +320,7 @@ export const works: Work[] = [
     rating: 4.5,
     tags: ['NTR', '隣人', '壁越し', '背徳感'],
     description: '薄い壁越しに隣の部屋から聞こえてくる声。そこには聴いてはいけないはずの真実が…。現実感あふれる演出と声優の熱演が高評価のリアル系NTR。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_740538/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=NTR',
   },
   {
@@ -333,7 +333,7 @@ export const works: Work[] = [
     rating: 4.4,
     tags: ['百合', '図書委員', '本', 'じれじれ'],
     description: '図書委員として一緒に活動するうちに芽生えた感情。本の貸し借りを通じて少しずつ距離が縮まるじれったい恋の展開が読者を惹きつける純愛百合。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_396367/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=百合',
   },
   {
@@ -346,7 +346,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['ASMR', '医者', '問診', '包容力'],
     description: '穏やかな女医さんが丁寧に問診してくれるロールプレイ系ASMR。優しい語りかけと心音・呼吸音の収録が絶妙。精神的に疲れた時に聴きたい包容力系の名作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_672060/',
     thumbnailUrl: 'https://placehold.co/300x300/1a1a1a/e63946?text=ASMR',
   },
   {
@@ -359,7 +359,7 @@ export const works: Work[] = [
     rating: 4.9,
     tags: ['催眠', '誘導型', 'バイノーラル', '安眠', '意識委ね'],
     description: '段階的な催眠誘導で意識の深層へと連れていく90分の大作。一般的な睡眠音声とは次元が違う「意識が委ねられていく感覚」を体験できる。繰り返し聴くことで誘導効果が深まる設計。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_656480/',
     thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
   },
   {
@@ -372,7 +372,7 @@ export const works: Work[] = [
     rating: 4.8,
     tags: ['催眠', '支配型', '洗脳', 'M向け', '服従'],
     description: '命令と断言で支配していく、支配型催眠の決定版。抵抗できるとわかっていても従いたくなる声と脚本の質が圧倒的。ヤンデレ×催眠の組み合わせが新境地を開いた問題作。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_741747/',
     thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
   },
   {
@@ -385,7 +385,7 @@ export const works: Work[] = [
     rating: 4.7,
     tags: ['催眠', 'ASMR', 'バイノーラル', '入門', '耳元'],
     description: 'ASMR技術と催眠誘導を融合させた入門向け作品。耳かきの音と囁きの中にそっと催眠誘導が入ってくる独特の設計。「催眠は怖い」という先入観がある方に特におすすめの一本。',
-    affiliateUrl: '#',
+    affiliateUrl: 'https://www.dmm.co.jp/dc/doujin/-/detail/=/cid=d_692442/',
     thumbnailUrl: 'https://placehold.co/300x300/1e1b2e/f472b6?text=催眠',
   },
 ];
