@@ -7,7 +7,7 @@ import { CATEGORY_TAGLINE } from '@/data/categories';
  * transition: border-color, color — never transition-all.
  */
 
-const CATEGORIES = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu', 'hypno'] as const;
+const CATEGORIES = ['asmr', 'ntr', 'ts', 'yuri', 'hypno'] as const;
 
 const CATEGORY_BORDER: Record<string, string> = {
   asmr:  'border-l-sky-400',

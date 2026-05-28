@@ -9,7 +9,7 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { CATEGORY_LABELS, Category } from '@/data/works';
 
-const CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'ninpu', 'hypno'];
+const CATEGORIES: Category[] = ['asmr', 'ntr', 'ts', 'yuri', 'hypno'];
 
 const NAV_LINKS = [
   { href: '/ranking', label: 'ランキング' },
