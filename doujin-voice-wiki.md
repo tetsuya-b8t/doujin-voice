@@ -92,6 +92,12 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY= # Supabaseプロジェクト設定から取得
   - text-white を text-ink に統一（セマンティクス修正）
   - design.md を現行システムと同期
 
+### 完了（追加分4）
+- [x] 催眠音声レビュー記事追加（/review/review-hypno-shinso-yudo）
+- [x] ASMRランキング5選記事追加（/column/asmr-ranking）
+  - 文体ガイド準拠・antislop済み（低リスク）
+  - 両記事とも2026-05-28付けでデプロイ済み
+
 ### 未対応
 - [ ] Vercel に NEXT_PUBLIC_DMM_AF_ID=doujinvoice-002 を追加（本番リンク有効化）
 - [ ] FANZA API自動化パイプライン構築（api_id 取得後）
