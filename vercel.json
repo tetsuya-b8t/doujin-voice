@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/fetch-works",
+      "schedule": "0 18 * * *"
+    }
+  ]
+}
