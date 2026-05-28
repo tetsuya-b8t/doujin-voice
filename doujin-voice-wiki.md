@@ -79,10 +79,28 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY= # Supabaseプロジェクト設定から取得
 - [x] プライバシーポリシー・利用規約ページ
 - [x] FANZAアフィリエイト申請
 
+### 完了（追加分3）
+- [x] FANZAアフィリエイト承認（af_id: doujinvoice-002）
+- [x] アフィリエイトリンク設置（src/lib/affiliate.ts、ch_id別計測対応）
+  - hero / detail / review の3箇所を buildAffiliateUrl() 経由に切り替え
+  - NEXT_PUBLIC_DMM_AF_ID を .env.local に追加（Vercel にも要追加）
+- [x] デザイン全面刷新（dark atmospheric 統一）
+  - globals.css を ivory/cosme から dark atmospheric（WCAG AAA対応）に完全移行
+  - ink(92%) / ink-2(78%) で7:1以上のコントラスト確保
+  - カテゴリアクセント6色をトークン化（--color-cat-*）
+  - ハードコードHex（WorkGrid/RankingSidebar/Header）を全トークン参照に
+  - text-white を text-ink に統一（セマンティクス修正）
+  - design.md を現行システムと同期
+
+### 完了（追加分4）
+- [x] 催眠音声レビュー記事追加（/review/review-hypno-shinso-yudo）
+- [x] ASMRランキング5選記事追加（/column/asmr-ranking）
+  - 文体ガイド準拠・antislop済み（低リスク）
+  - 両記事とも2026-05-28付けでデプロイ済み
+
 ### 未対応
-- [ ] FANZAアフィリエイト審査通過 → APIキー取得
-- [ ] FANZA API自動化パイプライン構築
-- [ ] アフィリエイトリンクをサイトに組み込む
+- [ ] Vercel に NEXT_PUBLIC_DMM_AF_ID=doujinvoice-002 を追加（本番リンク有効化）
+- [ ] FANZA API自動化パイプライン構築（api_id 取得後）
 - [ ] 作品データのSupabaseへの移行（現在は静的データ）
 
 ### 完了（追加分2）

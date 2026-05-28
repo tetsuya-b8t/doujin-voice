@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Work, CATEGORY_LABELS } from '@/data/works';
+import { buildAffiliateUrl } from '@/lib/affiliate';
 import StarRating from './StarRating';
 
 /* Hallmark · component: WorkHero · genre: atmospheric · design-system: design.md
@@ -57,7 +58,7 @@ export default function WorkHero({ work }: Props) {
 
           <div className="mt-6 flex items-center gap-4 flex-wrap">
             <Link
-              href={work.affiliateUrl}
+              href={buildAffiliateUrl(work.affiliateUrl, 'hero')}
               className="bg-accent hover:bg-accent-hover text-white font-black px-6 py-2.5 rounded-lg text-sm"
               style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
               target="_blank"

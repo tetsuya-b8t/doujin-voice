@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Work, CATEGORY_LABELS } from '@/data/works';
 import StarRating from './StarRating';
 
-/* Hallmark · component: WorkCard · genre: cosme · design-system: design.md
+/* Hallmark · component: WorkCard · genre: atmospheric · design-system: design.md
  * Rounded card: 3:4 jacket, amber star rating, rose tag pill, hover border.
  */
 
