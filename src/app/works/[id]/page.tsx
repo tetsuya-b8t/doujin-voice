@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { works, getWorkById, getWorksByCategory, Category, CATEGORY_LABELS } from '@/data/works';
 import { articles } from '@/data/articles';
+import { buildAffiliateUrl } from '@/lib/affiliate';
 import StarRating from '@/components/StarRating';
 import WorkCard from '@/components/WorkCard';
 
@@ -45,13 +46,13 @@ const CATEGORY_COLUMN: Record<Category, string> = {
   hypno: 'what-is-hypno',
 };
 
-const CATEGORY_ACCENT: Record<Category, string> = {
-  asmr:  'bg-sky-400',
-  ntr:   'bg-rose-400',
-  ts:    'bg-amber-400',
-  yuri:  'bg-pink-400',
-  ninpu: 'bg-emerald-400',
-  hypno: 'bg-violet-400',
+const CATEGORY_ACCENT_COLOR: Record<Category, string> = {
+  asmr:  'var(--color-cat-asmr)',
+  ntr:   'var(--color-cat-ntr)',
+  ts:    'var(--color-cat-ts)',
+  yuri:  'var(--color-cat-yuri)',
+  ninpu: 'var(--color-cat-ninpu)',
+  hypno: 'var(--color-cat-hypno)',
 };
 
 export default async function WorkDetailPage({ params }: Props) {
@@ -73,7 +74,7 @@ export default async function WorkDetailPage({ params }: Props) {
         <div className="md:flex md:min-h-[300px]">
           {/* Jacket — 3:4 on mobile, full height on desktop */}
           <div className="relative h-64 md:h-auto md:w-2/5 flex-shrink-0">
-            <div className={`absolute left-0 top-0 bottom-0 w-0.5 z-10 ${CATEGORY_ACCENT[work.category]}`} />
+            <div className="absolute left-0 top-0 bottom-0 w-0.5 z-10" style={{ backgroundColor: CATEGORY_ACCENT_COLOR[work.category] }} />
             <Image
               src={work.thumbnailUrl}
               alt={work.title}
@@ -95,7 +96,7 @@ export default async function WorkDetailPage({ params }: Props) {
                 <StarRating rating={work.rating} />
               </div>
 
-              <h1 className="text-xl font-black text-white leading-tight mb-3">
+              <h1 className="text-xl font-black text-ink leading-tight mb-3">
                 {work.title}
               </h1>
 
@@ -115,7 +116,7 @@ export default async function WorkDetailPage({ params }: Props) {
                   <Link
                     key={tag}
                     href={`/tag/${encodeURIComponent(tag)}`}
-                    className="text-xs bg-paper-3 text-ink-2 hover:text-white hover:bg-paper-3 px-2 py-0.5 rounded"
+                    className="text-xs bg-paper-3 text-ink-2 hover:text-ink hover:bg-paper-3 px-2 py-0.5 rounded"
                     style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
                   >
                     #{tag}
@@ -125,8 +126,8 @@ export default async function WorkDetailPage({ params }: Props) {
             </div>
 
             <Link
-              href={work.affiliateUrl}
-              className="block w-full text-center bg-accent hover:bg-accent-hover text-white font-black py-3 rounded-lg text-base"
+              href={buildAffiliateUrl(work.affiliateUrl, 'detail')}
+              className="block w-full text-center bg-accent hover:bg-accent-hover text-ink font-black py-3 rounded-lg text-base"
               style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
               target="_blank"
               rel="noopener noreferrer nofollow"
@@ -139,7 +140,7 @@ export default async function WorkDetailPage({ params }: Props) {
 
       {/* Description */}
       <section className="mt-8">
-        <h2 className="text-sm font-black font-display uppercase tracking-widest mb-3 pb-2 border-b border-rule text-white">
+        <h2 className="text-sm font-black font-display uppercase tracking-widest mb-3 pb-2 border-b border-rule text-ink">
           作品紹介
         </h2>
         <p className="text-ink-2 text-sm leading-relaxed whitespace-pre-wrap">{work.description}</p>
@@ -155,7 +156,7 @@ export default async function WorkDetailPage({ params }: Props) {
             <div className="w-0.5 h-8 bg-accent flex-shrink-0" />
             <div>
               <p className="text-[10px] text-ink-2 mb-1 font-display uppercase tracking-widest">このジャンルをもっと知る</p>
-              <p className="text-sm font-bold text-ink group-hover:text-white">{columnArticle.title}</p>
+              <p className="text-sm font-bold text-ink group-hover:text-ink">{columnArticle.title}</p>
             </div>
             <span className="ml-auto text-ink-2 text-sm font-display font-bold">→</span>
           </div>
@@ -165,7 +166,7 @@ export default async function WorkDetailPage({ params }: Props) {
       {/* Related works */}
       {relatedWorks.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-sm font-black font-display uppercase tracking-widest mb-4 pb-2 border-b border-rule text-white">
+          <h2 className="text-sm font-black font-display uppercase tracking-widest mb-4 pb-2 border-b border-rule text-ink">
             同じジャンルのおすすめ
           </h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -179,14 +180,14 @@ export default async function WorkDetailPage({ params }: Props) {
       <div className="mt-8 flex gap-6 text-xs text-ink-2">
         <Link
           href="/"
-          className="hover:text-white"
+          className="hover:text-ink"
           style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
         >
           ← トップに戻る
         </Link>
         <Link
           href={`/category/${work.category}`}
-          className="hover:text-white"
+          className="hover:text-ink"
           style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
         >
           カテゴリ一覧 →

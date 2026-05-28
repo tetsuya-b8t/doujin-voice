@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { articles, getArticleBySlug } from '@/data/articles';
 import { getWorkById, CATEGORY_LABELS } from '@/data/works';
+import { buildAffiliateUrl } from '@/lib/affiliate';
 import StarRating from '@/components/StarRating';
 import WorkCard from '@/components/WorkCard';
 
@@ -63,7 +64,7 @@ export default async function ReviewDetailPage({ params }: Props) {
         <time className="text-[10px] text-ink-2 ml-2">{article.publishedAt}</time>
       </div>
 
-      <h1 className="text-2xl md:text-3xl font-black text-white leading-snug mb-8">{article.title}</h1>
+      <h1 className="text-2xl md:text-3xl font-black text-ink leading-snug mb-8">{article.title}</h1>
 
       <div className="lg:flex lg:gap-8">
         {/* Sidebar: jacket + meta */}
@@ -108,8 +109,8 @@ export default async function ReviewDetailPage({ params }: Props) {
                   </div>
                 </div>
                 <Link
-                  href={primaryWork.affiliateUrl}
-                  className="block w-full text-center bg-accent hover:bg-accent-hover text-white font-black py-2.5 rounded-lg text-xs"
+                  href={buildAffiliateUrl(primaryWork.affiliateUrl, 'review')}
+                  className="block w-full text-center bg-accent hover:bg-accent-hover text-ink font-black py-2.5 rounded-lg text-xs"
                   style={{ transitionProperty: 'background-color', transitionDuration: '150ms' }}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -144,7 +145,7 @@ export default async function ReviewDetailPage({ params }: Props) {
                 {section.heading && (
                   <div className="flex items-start gap-3 mb-4">
                     <div className="w-0.5 h-4 bg-accent flex-shrink-0 mt-1" />
-                    <h2 className="text-base font-bold text-white leading-snug">{section.heading}</h2>
+                    <h2 className="text-base font-bold text-ink leading-snug">{section.heading}</h2>
                   </div>
                 )}
                 <p className="text-sm text-ink leading-[1.9] whitespace-pre-wrap">{section.body}</p>
@@ -156,7 +157,7 @@ export default async function ReviewDetailPage({ params }: Props) {
           {relatedWorks.length > 0 && (
             <section className="mt-12">
               <div className="flex items-center gap-2 mb-4 pb-2 border-b border-rule">
-                <h2 className="text-sm font-black font-display uppercase tracking-widest text-white">一緒に聴きたい作品</h2>
+                <h2 className="text-sm font-black font-display uppercase tracking-widest text-ink">一緒に聴きたい作品</h2>
               </div>
               <div className="grid grid-cols-3 gap-3">
                 {relatedWorks.map((work) => (
@@ -169,14 +170,14 @@ export default async function ReviewDetailPage({ params }: Props) {
           <div className="mt-10 flex gap-6 text-xs text-ink-2">
             <Link
               href="/column"
-              className="hover:text-white"
+              className="hover:text-ink"
               style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
             >
               ← コラム一覧
             </Link>
             <Link
               href="/"
-              className="hover:text-white"
+              className="hover:text-ink"
               style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
             >
               トップへ

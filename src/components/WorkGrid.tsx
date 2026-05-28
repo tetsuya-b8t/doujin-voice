@@ -31,16 +31,17 @@ export default function WorkGrid({ newWorks, popularWorks, featuredWorks }: Prop
 
   return (
     <section>
-      <div className="flex gap-1 mb-4 border-b border-gray-800">
+      <div className="flex gap-1 mb-4 border-b border-rule">
         {(Object.keys(TAB_LABELS) as Tab[]).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 text-sm font-bold transition-colors -mb-px border-b-2 ${
+            className={`px-4 py-2 text-sm font-bold -mb-px border-b-2 ${
               activeTab === tab
                 ? 'text-accent border-accent'
-                : 'text-gray-500 border-transparent hover:text-gray-300'
+                : 'text-ink-2 border-transparent hover:text-ink'
             }`}
+            style={{ transitionProperty: 'color', transitionDuration: '150ms' }}
           >
             {TAB_LABELS[tab]}
           </button>

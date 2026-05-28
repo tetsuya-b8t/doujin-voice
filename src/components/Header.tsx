@@ -1,6 +1,6 @@
 'use client';
 
-/* Hallmark · component: Header · genre: cosme · design-system: design.md
+/* Hallmark · component: Header · genre: atmospheric · design-system: design.md
  * White background. Rose logo (bold upright). Pill search. Underline tab nav.
  */
 
@@ -30,7 +30,7 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-4 h-14 flex items-center gap-5">
         <Link href="/" className="flex-shrink-0">
           <span className="font-black text-lg text-accent leading-none tracking-tight">
-            doujin<span style={{ color: '#d4848a' }}>·</span>voice
+            doujin<span style={{ color: 'var(--color-accent-hover)' }}>·</span>voice
           </span>
         </Link>
 
