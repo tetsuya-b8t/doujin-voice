@@ -18,7 +18,7 @@ export default function RankingSidebar({ works }: Props) {
         {works.slice(0, 5).map((work, i) => (
           <li key={work.id}>
             <Link href={`/works/${work.id}`} className="flex items-center gap-3 group">
-              <span className="text-base font-black w-6 text-center flex-shrink-0" style={{ color: i === 0 ? '#e8a030' : '#bbb' }}>
+              <span className="text-base font-black w-6 text-center flex-shrink-0" style={{ color: i === 0 ? 'var(--color-star)' : 'var(--color-ink-2)' }}>
                 {i + 1}
               </span>
               <Image
