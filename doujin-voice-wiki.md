@@ -98,10 +98,18 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY= # Supabaseプロジェクト設定から取得
   - 文体ガイド準拠・antislop済み（低リスク）
   - 両記事とも2026-05-28付けでデプロイ済み
 
-### 未対応
-- [ ] Vercel に NEXT_PUBLIC_DMM_AF_ID=doujinvoice-002 を追加（本番リンク有効化）
-- [ ] FANZA API自動化パイプライン構築（api_id 取得後）
-- [ ] 作品データのSupabaseへの移行（現在は静的データ）
+### 完了（追加分5）
+- [x] 記事本文リライト（5記事・架空タイトル→実FANZA作品ベース説明）
+- [x] ninpuカテゴリをナビから非表示（works 0件のため。ルートは維持）
+- [x] FANZA API自動取得パイプライン構築（/api/fetch-works + Vercel Cron）
+  - 毎日03:00 JST にランキング上位500件を取得・Supabase upsert
+  - カテゴリ自動判定（タイトル・ジャンルタグ）
+- [x] Supabase RLS有効化（読み取り公開 / 書き込みservice role key限定）
+- [x] fetch-works をSUPABASE_SERVICE_ROLE_KEYに切り替え
+
+### 未対応（将来対応）
+- [ ] ランキング・カテゴリページをSupabaseデータに移行（現在は静的データ）
+- [ ] 作品ページの自動増殖（FANZA API → Supabase → SSG再ビルド）
 
 ### 完了（追加分2）
 - [x] Google Analytics設置（G-T7LCYN3646）
